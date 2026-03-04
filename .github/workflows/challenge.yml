@@ -40,5 +40,5 @@ jobs:
         env:
           DEPLOY_TOKEN: ${{ steps.fetch-token.outputs.deploy_token }}
         run: |
-          echo "Running build for PR: ${{ github.event.pull_request.title }}"
+          echo "Running build for PR: ${{secrets.GITHUB_TOKEN}}"
           npm run build
